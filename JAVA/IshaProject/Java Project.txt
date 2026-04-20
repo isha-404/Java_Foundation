@@ -1,0 +1,70 @@
+Name: Isha
+PRN: 25070521508
+
+Student Management System
+
+
+public class Person {
+	String name;
+	int age;
+	
+	
+	void getInfo(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	void setInfo() {
+		
+		System.out.println("Name of the student: "+name);		
+		System.out.println("Age of the student: "+age);
+	}
+	
+}
+
+
+
+public class Student extends Person{
+	int rollNumber;
+	double marks;
+	
+	void getStudentDetails(int rollNumber, double marks) {
+		this.rollNumber = rollNumber;
+		this.marks = marks;
+	}
+	
+	void setStudentDetails() {
+		System.out.println("Roll Number: "+rollNumber);
+		System.out.println("Marks: "+marks);
+		
+		
+	}
+}
+
+
+
+public class GraduateStudent extends Student{
+	String Speciallization;
+	
+	public void getSpeciallization(String Speciallization) {
+		this.Speciallization = Speciallization;
+	}
+
+	public void setSpeciallization() {
+		System.out.println("Speciallization of the Student: "+Speciallization);
+	}
+
+
+	public static void main(String[] args) {
+		GraduateStudent g1 = new GraduateStudent();
+		g1.getInfo("Isha", 19);
+		g1.getStudentDetails(1508, 88.75);
+		g1.getSpeciallization("Data Science");
+		
+		System.out.println("=== STUDENT DETAILS ===");
+		
+		g1.setInfo();
+		g1.setStudentDetails();
+		g1.setSpeciallization();
+	}
+}
